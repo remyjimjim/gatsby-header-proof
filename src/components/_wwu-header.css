@@ -1,0 +1,171 @@
+/**
+ * @file
+ * organisms/site-header/_site-header.scss
+ */
+/**
+ * @file
+ * 00-utilities/_fonts.scss
+ */
+/**
+ * @file
+ * 00-utilities/_strip-unit.scss
+ */
+.western-header {
+  position: relative;
+  z-index: 2;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0.7) 50%, rgba(255, 255, 255, 0.2) 100%);
+}
+@media (min-width: 841px) {
+  .western-header {
+    display: grid;
+    -ms-grid-columns: 12px 1fr 12px;
+    -ms-grid-rows: auto;
+    grid-template-columns: 12px 1fr 12px;
+    grid-template-rows: auto;
+  }
+}
+@media (min-width: 1300px) {
+  .western-header {
+    grid-template-columns: 1fr 1300px 1fr;
+  }
+}
+@media (min-width: 841px) {
+  .western-header .wrap {
+    position: relative;
+    display: grid;
+    grid-column: 2/span 2;
+    -ms-grid-column-span: 1;
+    -ms-grid-columns: 266px 12px 1fr 58px;
+    grid-row: 1/span 1;
+    -ms-grid-row-span: 1;
+    -ms-grid-rows: 58px;
+    grid-template-areas: "logo quick-links search lang_select";
+    grid-template-columns: 266px 1fr 58px 0.25fr;
+    grid-template-rows: 58px;
+  }
+}
+@media (min-width: 1300px) {
+  .western-header .wrap {
+    -ms-grid-columns: 306px 12px 1fr 68px;
+    -ms-grid-rows: 68px;
+    grid-template-columns: 306px 1fr 68px 0.25fr;
+    grid-template-rows: 68px;
+  }
+}
+.western-header .wrap .western-logo {
+  color: #fff;
+  background-color: #003f87;
+  grid-area: logo;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+}
+.western-header .wrap .western-logo .western-home-link {
+  display: flex;
+  justify-content: center;
+  margin: inherit;
+  padding: 0;
+  padding-right: 68px;
+  color: #fff;
+  border: none;
+}
+@media (min-width: 841px) {
+  .western-header .wrap .western-logo .western-home-link {
+    padding-right: 0;
+  }
+}
+.western-header .wrap .western-logo .western-home-link:hover, .western-header .wrap .western-logo .western-home-link:focus, .western-header .wrap .western-logo .western-home-link:active {
+  background: transparent;
+}
+.western-header .wrap .site-name {
+  display: block;
+  margin: 0;
+  padding: 6px 12px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  color: #fff;
+  border-top: 1px solid #007ac8;
+  border-bottom: 1px solid #007ac8;
+  background: linear-gradient(to right, #003f87 0%, rgba(0, 63, 135, 0.8) 100%);
+  font-family: "PT Serif", serif;
+  font-size: calc(16px + 2 * ((100vw - 300px) / 1000));
+  font-weight: 400;
+  line-height: 1.5em;
+}
+@media (min-width: 841px) {
+  .western-header .wrap .site-name {
+    display: block !important;
+    border-top: 1px solid #007ac8;
+    border-bottom: none;
+  }
+}
+.western-header .wrap .quick-links {
+  display: none;
+  align-self: center;
+  grid-area: quick-links;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  justify-self: end;
+}
+@media (min-width: 841px) {
+  .western-header .wrap .quick-links {
+    display: block !important;
+  }
+}
+.western-header .wrap .toggle-menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+@media (min-width: 841px) {
+  .western-header .wrap .toggle-menu {
+    display: none;
+  }
+}
+.western-header .wrap .toggle-menu:hover, .western-header .wrap .toggle-menu:focus, .western-header .wrap .toggle-menu:active {
+  background-color: #002f5e;
+}
+.western-header .wrap .search {
+  align-self: center;
+  grid-area: search;
+  justify-self: end;
+}
+@media (min-width: 841px) {
+  .western-header .wrap .search {
+    top: 0;
+    right: 0;
+  }
+}
+.western-header .wrap .lang_select {
+  align-self: center;
+  grid-area: lang_select;
+  justify-self: end;
+}
+@media (min-width: 841px) {
+  .western-header .wrap .western-logo {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .western-header .wrap .quick-links {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .western-header .wrap .search {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+  .western-header .wrap .lang_select {
+    -ms-grid-row: 1;
+    -ms-grid-column: 4;
+  }
+}
+@media (min-width: 841px) {
+  .western-header .wrap .lang_select {
+    top: 0;
+    right: 0;
+  }
+}
