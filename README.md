@@ -20,6 +20,7 @@ This app is the same as the gatsby-hello-world-starter template with the followi
 ## Current issues:
 - The sass (header.module.scss) is almost working, but for some reason it can't see a variable ($medium) that should be available. For now it's using header.module.css.
 - Having trouble getting "custom" javascript to execute when it's called from header.js component.  That's supposed to be what the Helmet plugin is for and the <script> tag is being added to the <head> but for some reason the javascript from the file js/wwu-header-test.js never fires. 
+- Styling's off, probably needs to include some base styles.
 
 
 

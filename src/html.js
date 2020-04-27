@@ -16,8 +16,7 @@ export default function HTML(props) {
           integrity="sha256-sCexhaKpAfuqulKjtSY7V9H7QT0TCN90H+Y5NlmqOUE="
           crossOrigin="anonymous">
         </script>
-        <script src="../js/wwu-header-test.js"
-        />
+       
         {props.headComponents}
       </head>
       <body {...props.bodyAttributes}>

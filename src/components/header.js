@@ -1,12 +1,16 @@
 import React from "react"
 import $ from 'jquery'
 import {Helmet} from "react-helmet";
+import { withPrefix, Link } from "gatsby"
 import styles from "./header.module.css"
 
 const Header = () => {
   return (
 <header className={styles.siteHeader}>
-  <button type="button" onclick='myFunction'>Try it</button>
+  <Helmet>
+      <script src={'wwu-header-test.js'} type="text/javascript" />
+  </Helmet>
+  <button type="button" onclick='myFunction()'>Try it</button>
     <div className={styles.westernHeader}>
       <div className={styles.wrap}>
         <div className={styles.westernLogo}>
