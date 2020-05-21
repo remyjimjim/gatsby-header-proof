@@ -21,8 +21,15 @@ This app is the same as the gatsby-hello-world-starter template with the followi
 - The sass (header.module.scss) is almost working, but for some reason it can't see a variable ($medium) that should be available. For now it's using header.module.css.
 - Having trouble getting "custom" javascript to execute when it's called from header.js component.  That's supposed to be what the Helmet plugin is for and the <script> tag is being added to the <head> but for some reason the javascript from the file js/wwu-header-test.js never fires. 
 - Styling's off, probably needs to include some base styles.
+- Don't think jquery is working but I can't remember right now.
 
+## Executive Summary:
+- The app currently uses the "css modules" gatsby recommended approach to styling.  There's also the "CSS in JS" approach that may be a better fit in terms of component plug and play if/when one decides to go the autonomous "component" route.  
+- The app doesn't factor out the css into modules right now, ideally, you'd have a region specific css module (one for the header, footer, main nav plus a "base" stylesheet module), the app right now just throws everything (literally) into a single header module.  Someone who speaks better css than I should be able to sort that out fairly quickly.
+- Below the quick start section is a pretty sweet gatsby provided rundown of the project contents and gatsby resources.
 
+## Quick Start
+- If your node/npm are good to go and you've installed the gatsby client (npm install -g gatsby-cli) then aside from the initial npm install you can just run 'gatsby develop' 
 
 ## 🧐 What's inside?
 
